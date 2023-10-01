@@ -19,9 +19,9 @@ st.title("Penguin Species Prediction")
 # Get user input for each variable
 island_input = st.selectbox('Select island:', ['Torgersen', 'Biscoe', 'Dream'])
 culmen_length_input = st.slider('Enter culmen length:', 0, 50, 37)
-culmen_depth_input = st.slider('Enter culmen depth in mm (0 to 50):', min_value=0, max_value=30)
-flipper_length_input = st.number_input('Enter flipper length in mm (0 to 200):', min_value=0, max_value=250)
-body_mass_input = st.number_input('Enter body mass in g (1000 to 5000):', min_value=1000, max_value=6000)
+culmen_depth_input = st.slider('Enter culmen depth in mm (0 to 30):', min_value=0, max_value=30)
+flipper_length_input = st.number_input('Enter flipper length in mm (0 to 250):', min_value=0, max_value=250)
+body_mass_input = st.number_input('Enter body mass in g (1000 to 6000):', min_value=1000, max_value=6000)
 sex_input = st.selectbox('Select sex:', ['MALE', 'FEMALE'])
 
 # Create a DataFrame with user input
@@ -44,4 +44,4 @@ result = species_encoder.inverse_transform(y_pred_new)
 
 # Display result
 st.subheader('Prediction Result :', divider='rainbow')
-st.markdown(f'Predicted Species: <p style="color: lightblue;">{result}</p>', unsafe_allow_html=True)
+st.markdown(f'Predicted Species: <p style="color: pink;">{result}</p>', unsafe_allow_html=True)
