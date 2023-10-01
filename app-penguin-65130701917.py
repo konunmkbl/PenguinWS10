@@ -43,6 +43,5 @@ y_pred_new = model.predict(x_new)
 result = species_encoder.inverse_transform(y_pred_new)
 
 # Display result
-st.subheader('Result', divider='rainbow')
-st.subheader('Prediction Result:')
+st.subheader('Prediction Result :', divider='rainbow')
 st.markdown(f'Predicted Species: <p style="color: blue;">{result}</p>', unsafe_allow_html=True)
