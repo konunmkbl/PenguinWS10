@@ -43,5 +43,6 @@ y_pred_new = model.predict(x_new)
 result = species_encoder.inverse_transform(y_pred_new)
 
 # Display result
+st.subheader('Result', divider='rainbow')
 st.subheader('Prediction Result:')
-st.write(f'Predicted Species: {result[0]}')
+st.write(f'Predicted Species: blue[cool]{result[0]}')
